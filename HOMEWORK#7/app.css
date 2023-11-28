@@ -1,0 +1,250 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-family: sans-serif;
+  margin: 0;
+  padding: 0;
+  position: relative;
+}
+header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  background-color: lightsalmon;
+  color: red;
+}
+
+main {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  background-color: red;
+  border: 5px solid black;
+  width: 800px;
+  height: 400px;
+  margin: 50px 250px;
+  justify-items: center;
+}
+
+.content .first {
+  display: grid;
+  width: 50%;
+  height: 50px;
+  align-self: center;
+}
+.first .top {
+  background-color: white;
+  width: 1px;
+  height: 3px;
+  justify-content: start;
+  align-content: bottom;
+
+  animation-name: firstTop;
+  animation-duration: 5s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+p {
+  color: white;
+  font-weight: 400;
+  justify-self: center;
+}
+
+.first .bottom {
+  background-color: white;
+  width: 1px;
+  height: 3px;
+  justify-content: start;
+  align-content: top;
+
+  animation-name: firstBottom;
+  animation-duration: 5s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+
+.content .second {
+  display: grid;
+  width: 50%;
+  height: 50px;
+  align-self: center;
+}
+
+.second-box {
+  display: grid;
+  width: 200px;
+  height: 50px;
+  background-color: white;
+
+  align-self: center;
+
+  animation-name: second-boxSecond;
+  animation-duration: 5s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+.second-box .paragraph {
+  align-self: center;
+}
+.content .third {
+  background-color: red;
+}
+.third {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  align-self: center;
+  gap: 10px;
+
+  animation-name: third;
+  animation-duration: 1.5s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+.box {
+  background-color: white;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+}
+.box:nth-child(1) {
+  opacity: 50%;
+}
+.box:nth-child(3) {
+  opacity: 50%;
+}
+.fourth {
+  display: grid;
+  width: 60px;
+  height: 60px;
+  align-self: center;
+}
+.circle {
+  background-color: white;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+
+  animation-name: circle;
+  animation-duration: 2s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+.square {
+  background-color: red;
+  width: 60px;
+  height: 60px;
+  place-content: center;
+
+  animation-name: square;
+  animation-duration: 5s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+@keyframes firstBottom {
+  0% {
+    width: 0%;
+    background-color: white;
+  }
+  50% {
+    width: 50%;
+    background-color: white;
+  }
+  80% {
+    width: 100%;
+    background-color: white;
+  }
+  100% {
+    background-color: transparent;
+  }
+}
+@keyframes firstTop {
+  0% {
+    width: 0%;
+    background-color: white;
+  }
+  50% {
+    width: 50%;
+    background-color: white;
+  }
+  80% {
+    width: 100%;
+    background-color: white;
+  }
+  100% {
+    background-color: transparent;
+  }
+}
+@keyframes second-boxSecond {
+  0% {
+    width: 0%;
+    height: 100%;
+    background-color: white;
+  }
+  50% {
+    width: 50%;
+    height: 100%;
+    background-color: white;
+  }
+  80% {
+    width: 100%;
+
+    background-color: white;
+  }
+  100% {
+    background-color: transparent;
+  }
+}
+@keyframes third {
+  0% {
+    justify-self: center;
+  }
+
+  50% {
+    transform: rotate(180deg);
+  }
+
+  100% {
+    transform: rotate(180deg);
+  }
+}
+
+@keyframes square {
+  0% {
+    width: 0%;
+    background-color: white;
+  }
+  25% {
+    width: 50%;
+    background-color: white;
+  }
+  50% {
+    width: 100%;
+    background-color: white;
+  }
+  100% {
+    background-color: white;
+  }
+}
+@keyframes circle {
+  0% {
+    left: 0;
+    top: 0;
+  }
+  25% {
+    transform: translate(60px, 0);
+  }
+  50% {
+    transform: translate(60px, 75px);
+  }
+  75% {
+    transform: translate(-15px, 75px);
+  }
+  100% {
+    transform: translate(-15px, 0);
+  }
+}
